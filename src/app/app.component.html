@@ -1,20 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<section id="login-register" class="login-or-register">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-sm-12">
+        <div class="form-block text-center">
+          <div class="logo">SignUp</div>
+            <!-- Main Form -->
+            <div class="login-form-1">
+              <form #userForm="ngForm" id="login-form" class="text-left">
+                <div class="login-form-main-message"></div>
+                <div class="main-login-form">
+                  <div class="login-group">
+                    <div class="form-group">
+                      <label for="Name" class="sr-only">Name</label>
+                      <input type="text" class="form-control" name="" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="Email" class="sr-only">Email</label>
+                      <input type="email" class="form-control" name="" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="Phone" class="sr-only">Phone</label>
+                      <input type="text" class="form-control" name="" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                      <label for="Phone" class="sr-only">I'm Intersted In </label>
+                      <select class="custom-select form-control" id="sel1">
+                        <option selected>I'm Intersted In </option>
+                        <option *ngFor="let topic of topics">{{topic}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                          <input type="radio" class="form-check-input" name="timePerference" value="morning" checked>morning at (9Am - 12Pm)
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" class="form-check-input" name="timePerference" value="evening">evening at (9Pm - 12Am)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                          <input type="checkbox" class="form-check-input" name="Promotion" checked>Send Me Promotion Offers
+                        </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>  
+                </div>
+                <div class="etc-login-form">
+                  <p>forgot your password? <a href="#">click here</a></p>
+                  <p>new user? <a href="#">create new account</a></p>
+                </div>
+              </form>
+            </div>
+            <!-- end:Main Form -->
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
