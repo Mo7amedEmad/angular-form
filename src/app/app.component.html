@@ -7,39 +7,66 @@
             <!-- Main Form -->
             <div class="login-form-1">
               <form #userForm="ngForm" id="login-form" class="text-left">
+
+                  {{userForm.value | json}}
+                  <hr>
+                  {{userModel | json}}
+
                 <div class="login-form-main-message"></div>
                 <div class="main-login-form">
                   <div class="login-group">
+<!-- 
+                  <div ngModelGroup="address">
+                    <div class="form-group">
+                      <label for="street" class="sr-only">Street</label>
+                      <input type="text" class="form-control" name="street" placeholder="street">
+                    </div>
+                    <div class="form-group">
+                      <label for="city" class="sr-only">City</label>
+                      <input type="text" class="form-control" name="city" placeholder="city" ngModel>
+                    </div>
+                    <div class="form-group">
+                      <label for="state" class="sr-only">State</label>
+                      <input type="text" class="form-control" name="state" placeholder="state" ngModel>
+                    </div>
+                    <div class="form-group">
+                      <label for="postalCode" class="sr-only">Postal Code</label>
+                      <input type="text" class="form-control" name="postalCode" placeholder="postal Code" ngModel>
+                    </div>
+                  </div> -->
+
+
+
                     <div class="form-group">
                       <label for="Name" class="sr-only">Name</label>
-                      <input type="text" class="form-control" name="" placeholder="Name">
+                      <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)] ="userModel.name">
                     </div>
                     <div class="form-group">
                       <label for="Email" class="sr-only">Email</label>
-                      <input type="email" class="form-control" name="" placeholder="Email">
+                      <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)] ="userModel.email">
                     </div>
                     <div class="form-group">
                       <label for="Phone" class="sr-only">Phone</label>
-                      <input type="text" class="form-control" name="" placeholder="Phone">
+                      <input type="number" class="form-control" name="phone" placeholder="Phone" [(ngModel)] ="userModel.phone">
                     </div>
                     <div class="form-group">
                       <label for="Phone" class="sr-only">I'm Intersted In </label>
-                      <select class="custom-select form-control" id="sel1">
-                        <option selected>I'm Intersted In </option>
+                      <select class="custom-select form-control" id="sel1" name="topic" [(ngModel)] ="userModel.topic">
+                        <option value="">I'm Intersted In </option>
                         <option *ngFor="let topic of topics">{{topic}}</option>
                       </select>
                     </div>
                     <div class="form-group">
                         <label class="radio-inline">
-                          <input type="radio" class="form-check-input" name="timePerference" value="morning" checked>morning at (9Am - 12Pm)
+                          <input type="radio" class="form-check-input" name="timePerference" value="morning" checked [(ngModel)] ="userModel.timePerference">morning at (9Am - 12Pm)
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" class="form-check-input" name="timePerference" value="evening">evening at (9Pm - 12Am)
+                          <input type="radio" class="form-check-input" name="timePerference" value="evening" [(ngModel)] ="userModel.timePerference">evening at (9Pm - 12Am)
                         </label>
                     </div>
                     <div class="form-group">
                         <label class="radio-inline">
-                          <input type="checkbox" class="form-check-input" name="Promotion" checked>Send Me Promotion Offers
+                          <input type="checkbox" class="form-check-input" name="Promotion" checked [(ngModel)] ="userModel.Promotion">Send Me Promotion Offers
                         </label>
                     </div>
                   </div>

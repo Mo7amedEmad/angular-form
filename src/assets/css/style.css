@@ -142,27 +142,27 @@
 }
 /*=== 8. Custom Checkbox & Radio ===*/
 /* Base for label styling */
-#login-register [type="checkbox"]:not(:checked),
+/*#login-register [type="checkbox"]:not(:checked),
 #login-register [type="checkbox"]:checked,
 #login-register [type="radio"]:not(:checked)
-/*#login-register [type="radio"]:checked */{
+/*#login-register [type="radio"]:checked {
   position: absolute;
   left: -9999px;
-}
-#login-register [type="checkbox"]:not(:checked) + label,
+}*/
+/*#login-register [type="checkbox"]:not(:checked) + label,
 #login-register [type="checkbox"]:checked + label,
-#login-register [type="radio"]:not(:checked) + label
-/*#login-register [type="radio"]:checked + label*/ {
+#login-register [type="radio"]:not(:checked) + label*/
+/*#login-register [type="radio"]:checked + label*/ /*{
   position: relative;
   padding-left: 25px;
   padding-top: 1px;
   cursor: pointer;
-}
+}*/
 /* checkbox aspect */
-#login-register [type="checkbox"]:not(:checked) + label:before,
+/*#login-register [type="checkbox"]:not(:checked) + label:before,
 #login-register [type="checkbox"]:checked + label:before,
-#login-register [type="radio"]:not(:checked) + label:before
-/*#login-register [type="radio"]:checked + label:before*/ {
+#login-register [type="radio"]:not(:checked) + label:before*/
+/*#login-register [type="radio"]:checked + label:before*/ /*{
   content: '';
   position: absolute;
   left: 0;
@@ -173,40 +173,40 @@
   background: #f0f0f0;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-}
+}*/
 /* checked mark aspect */
-#login-register [type="checkbox"]:not(:checked) + label:after,
-#login-register [type="checkbox"]:checked + label:after
+/*#login-register [type="checkbox"]:not(:checked) + label:after,
+#login-register [type="checkbox"]:checked + label:after*/
 /*#login-register [type="radio"]:not(:checked) + label:after,*/
-/*#login-register [type="radio"]:checked + label:after*/ {
+/*#login-register [type="radio"]:checked + label:after*/ /*{
   position: absolute;
   color: #555555;
   transition: all .2s;
-}
+}*/
 /* checked mark aspect changes */
-#login-register [type="checkbox"]:not(:checked) + label:after
-/*#login-register [type="radio"]:not(:checked) + label:after */{
+/*#login-register [type="checkbox"]:not(:checked) + label:after*/
+/*#login-register [type="radio"]:not(:checked) + label:after *//*{
   opacity: 0;
   transform: scale(0);
-}
-#login-register [type="checkbox"]:checked + label:after
-/*#login-register [type="radio"]:checked + label:after*/ {
+}*/
+/*#login-register [type="checkbox"]:checked + label:after*/
+/*#login-register [type="radio"]:checked + label:after*//* {
   opacity: 1;
   transform: scale(1);
-}
+}*/
 /* disabled checkbox */
-#login-register [type="checkbox"]:disabled:not(:checked) + label:before,
-#login-register [type="checkbox"]:disabled:checked + label:before
+/*#login-register [type="checkbox"]:disabled:not(:checked) + label:before,
+#login-register [type="checkbox"]:disabled:checked + label:before*/
 /*#login-register [type="radio"]:disabled:not(:checked) + label:before,
-#login-register [type="radio"]:disabled:checked + label:before */{
+#login-register [type="radio"]:disabled:checked + label:before *//*{
   box-shadow: none;
   border-color: #8c8c8c;
   background-color: #878787;
-}
-#login-register [type="checkbox"]:disabled:checked + label:after
-/*#login-register [type="radio"]:disabled:checked + label:after*/ {
+}*/
+/*#login-register [type="checkbox"]:disabled:checked + label:after*/
+/*#login-register [type="radio"]:disabled:checked + label:after*/ /*{
   color: #555555;
-}
+}*/
 #login-register [type="checkbox"]:disabled + label
 /*#login-register [type="radio"]:disabled + label*/ {
   color: #8c8c8c;
